@@ -80,6 +80,16 @@
             padding-bottom: 20px; 
         }
     </style>
+    <script>
+        function jumpToAUXC() {
+            const selectElement = document.getElementById("AUXC_jumper");
+            const selectedValue = selectElement.value;
+
+            if(selectedValue) { // Only jump if a valid option is selected
+                window.location.hash = selectedValue;
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -131,7 +141,30 @@
     sentence is provided at the top of their information.</p>
 
     <h2>Individual AUXCs' utility equipment descriptions and images</h2>
-    <div class="auxc-checkin">
+    <p>Jump to a specific AUXC's check-in material:</p>
+
+    <select id=AUXC_jumper onchange="jumpToAUXC()">
+        <option value="">Select an AUXC</option>
+        <option value="AUXC_KC7TAK">KC7TAK</option>
+        <option value="AUXC_KD7DNM">KD7DNM</option>
+        <option value="AUXC_KF7KXX">KF7KXX</option>
+        <option value="AUXC_KI7BDP">KI7BDP</option>
+        <option value="AUXC_KI7DGC">KI7DGC</option>
+        <option value="AUXC_KI7FCG">KI7FCG</option>
+        <option value="AUXC_KI7LAG">KI7LAG</option>
+        <option value="AUXC_KI7O">KI7O</option>
+        <option value="AUXC_KJ7JCR">KJ7JCR</option>
+        <option value="AUXC_KK6OTP">KK6OTP</option>
+        <option value="AUXC_KK7MLS">KK7MLS</option>
+        <option value="AUXC_KK7ZTC">KK7ZTC</option>
+        <option value="AUXC_N1ACW">N1ACW</option>
+        <option value="AUXC_W6RKT">W6RKT</option>
+        <option value="AUXC_W7CRI">W7CRI</option>
+        <option value="AUXC_W7TEE">W7TEE</option>
+        <option value="AUXC_WA6ZLV">WA6ZLV</option>
+    </select>
+
+    <div class="auxc-checkin" id="AUXC_KI7DGC">
         <p class="checkin-sentence">
             150, KI7DGC, VARA FM, W7BVT-10, 145.020, LAKE OSWEGO, CLACKAMAS, OREGON
         </p>
@@ -159,7 +192,7 @@
         <p><em>Original image size: 503 x 409 pixels, 96 dpi, 87.6 kbytes</em></p>
     </div>
 
-    <div class="auxc-checkin">
+    <div class="auxc-checkin" id="AUXC_KK7MLS">
         <p class="checkin-sentence">
             150, KK7MLS, VARA FM, KD7ZDO-12, 441.525, LAKE OSWEGO, CLACKAMAS, OREGON
         </p>
@@ -174,7 +207,7 @@
         <p><em>Original image size: 175 x 233 pixels, 96 dpi, 97.3 kbytes</em></p>
     </div>
 
-    <div class="auxc-checkin">
+    <div class="auxc-checkin" id="AUXC_KF7KXX">
         <p class="checkin-sentence">
             150, KF7KXX, VARA FM, KF7CFQ-10, 145.090, Anacortes, Skagit, Washington
         </p>
@@ -212,7 +245,7 @@
         <p><em>Original image size: 637 x 849 pixels, 96 dpi, 92.5 kbytes</em></p>
     </div>
 
-    <div class="auxc-checkin">
+    <div class="auxc-checkin" id="AUXC_KD7DNM">
         <p class="checkin-sentence">
         150, KD7DNM, VARA FM, W7YAM-12, 145.090, Lake Oswego, Clackamas, OR
         </p>
@@ -244,7 +277,7 @@
 
     </div>
 
-    <div class="auxc-checkin">
+    <div class="auxc-checkin" id="AUXC_KI7O">
         <p class="checkin-sentence">
         150, KI7O, VARA FM, W7LT-11, 144.910, Clarkes, Clackamas, OR
         </p>
@@ -265,7 +298,7 @@
         <p><em>Original image size: 1323 x 992 pixels, 96 dpi, 97.3 kbytes</em></p>
     </div>
 
-    <div class="auxc-checkin">
+    <div class="auxc-checkin" id="AUXC_WA6ZLV">
         <p class="checkin-sentence">
         150, WA6ZLV, VARA FM, KD7ZDO-11, 145.770, Lake Oswego, Clackamas, Oregon
         </p>
@@ -295,7 +328,7 @@
         <p><em>Original image size: 608 x 704 pixels, 96 dpi, 97.2 kbytes</em></p>
     </div>
 
-    <div class="auxc-checkin">
+    <div class="auxc-checkin" id="AUXC_KJ7JCR">
         <p class="checkin-sentence">
         150, KJ7JCR, VARA FM, W7BVT-10, 145.020, Lake Oswego, Clackamas, Oregon
         </p>
@@ -324,7 +357,7 @@
         <p><em>Original image size: 393 x 899 pixels, 96 dpi, 97.4 kbytes</em></p>
     </div>
 
-    <div class="auxc-checkin">
+    <div class="auxc-checkin" id="AUXC_W6RKT">
         <p class="checkin-sentence">
         150, W6RKT, VARA FM, K7YFJ-12, 441.525, Battle Ground, Clark, WA
         </p>
@@ -344,7 +377,7 @@
         <p><em>Original image size: 535 x 713 pixels, 96 dpi, 97.7 kbytes</em></p>
     </div>
 
-    <div class="auxc-checkin">
+    <div class="auxc-checkin" id="AUXC_KC7TAK">
         <p class="checkin-sentence">
         150, KC7TAK, VARA FM, KD7ZDO-11, 145.770, Clarkes, Clackamas, Oregon
         </p>
@@ -397,7 +430,7 @@
         <p><em>Original image size: 420 x 2411 pixels, 96 dpi, 98.3 kbytes</em></p>
     </div>
 
-    <div class="auxc-checkin">
+    <div class="auxc-checkin" id="AUXC_KI7LAG">
         <p class="checkin-sentence">
         150, KI7LAG, VARA FM, KD7REX-10, 145.040, Beaverton, Washington, OR
         </p>
@@ -418,7 +451,7 @@
         <p><em>Original image size: 563 x 750 pixels, 96 dpi, 70.2 kbytes</em></p>
     </div>
 
-    <div class="auxc-checkin">
+    <div class="auxc-checkin" id="AUXC_W7TEE">
         <p class="checkin-sentence">
         150, W7TEE, VARA FM, W7TPN-10, 145.710, Clarkes, Clackamas, Oregon
         </p>
@@ -443,7 +476,7 @@
         <p><em>Original image size: 377 x 959 pixels, 96 dpi, 97.1 kbytes</em></p>
     </div>
 
-    <div class="auxc-checkin">
+    <div class="auxc-checkin" id="AUXC_W7CRI">
         <p class="checkin-sentence">
         150, W7CRI, VARA FM, W7OWO-10, 441.000, Wilsonville, Clackamas, Oregon
         </p>
@@ -480,7 +513,7 @@
         <p><em>Original image 3 size: 395 x 319 pixels, 96 dpi, 25.3 kbytes</em></p>
     </div>
 
-    <div class="auxc-checkin">
+    <div class="auxc-checkin" id="AUXC_KI7BDP">
         <p class="checkin-sentence">
             150, KI7BDP, VARA FM, W7LT-11, 144.910, OREGON CITY, CLACKAMAS, OR
         </p>
@@ -504,7 +537,7 @@
         <p><em>Original image size: 541 x 598 pixels, 96 dpi, 97.6 kbytes</em></p>
     </div>
 
-    <div class="auxc-checkin">
+    <div class="auxc-checkin" id="AUXC_KK7ZTC">
         <p class="checkin-sentence">
         150, KK7ZTC, VARA FM, KD7ZDO-11, 145.770, Lake Oswego, Clackamas, Oregon
         </p>
@@ -533,7 +566,7 @@
         <p><em>Original image size: 728 x 1049 pixels, 96 dpi, 121.1 kbytes</em></p>
     </div>
 
-    <div class="auxc-checkin">
+    <div class="auxc-checkin" id="AUXC_KI7FCG">
         <p class="checkin-sentence">
             150, KI7FCG, VARA FM, KD7ZDO-11, 145.770, BORING, CLACKAMAS, OR
         </p>
@@ -548,7 +581,7 @@
         <p><em>Original image size: 540 x 785 pixels, 96 dpi, 69.0 kbytes</em></p>
     </div>
 
-    <div class="auxc-checkin">
+    <div class="auxc-checkin" id="AUXC_KK6OTP">
         <p class="checkin-sentence">
             150, KK6OTP, VARA FM, W7LT-11, 144.910, Wilsonville, Clackamas, OR
         </p>
@@ -580,7 +613,7 @@
         <p><em>Original image size: 585 x 913 pixels, 96 dpi, 140.8 kbytes</em></p>
     </div>
 
-    <div class="auxc-checkin">
+    <div class="auxc-checkin" id="AUXC_N1ACW">
         <p class="checkin-sentence">
         150, N1ACW, VARA FM, N1ACW-10, 145.530, Lake Oswego, Clackamas, Oregon
         </p>
