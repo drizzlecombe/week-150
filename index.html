@@ -79,10 +79,25 @@
             padding-top: 0px;
             padding-bottom: 20px; 
         }
+        
+        #jump-to-AUXC-block {
+            display: flex;
+            align-items: center; 
+        }
+
+        #AUXC-jump-paragraph {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        #AUXC-select-list {
+            display: inline-block;
+        }
     </style>
+
     <script>
         function jumpToAUXC() {
-            const selectElement = document.getElementById("AUXC_jumper");
+            const selectElement = document.getElementById("AUXC-select-list");
             const selectedValue = selectElement.value;
 
             if(selectedValue) { // Only jump if a valid option is selected
@@ -141,29 +156,31 @@
     sentence is provided at the top of their information.</p>
 
     <h2>Individual AUXCs' utility equipment descriptions and images</h2>
-    <p>Jump to a specific AUXC's check-in material:</p>
 
-    <select id=AUXC_jumper onchange="jumpToAUXC()">
-        <option value="">Select an AUXC</option>
-        <option value="AUXC_KC7TAK">KC7TAK</option>
-        <option value="AUXC_KD7DNM">KD7DNM</option>
-        <option value="AUXC_KF7KXX">KF7KXX</option>
-        <option value="AUXC_KI7BDP">KI7BDP</option>
-        <option value="AUXC_KI7DGC">KI7DGC</option>
-        <option value="AUXC_KI7FCG">KI7FCG</option>
-        <option value="AUXC_KI7LAG">KI7LAG</option>
-        <option value="AUXC_KI7O">KI7O</option>
-        <option value="AUXC_KJ7JCR">KJ7JCR</option>
-        <option value="AUXC_KK6OTP">KK6OTP</option>
-        <option value="AUXC_KK7MLS">KK7MLS</option>
-        <option value="AUXC_KK7ZTC">KK7ZTC</option>
-        <option value="AUXC_N1ACW">N1ACW</option>
-        <option value="AUXC_W6RKT">W6RKT</option>
-        <option value="AUXC_W7CRI">W7CRI</option>
-        <option value="AUXC_W7TEE">W7TEE</option>
-        <option value="AUXC_WA6ZLV">WA6ZLV</option>
-    </select>
+    <div id="jump-to-AUXC-block">
+        <p id="AUXC-jump-paragraph">Jump to a specific AUXC's check-in material:</p>
 
+        <select id=AUXC-select-list onchange="jumpToAUXC()">
+            <option value="">Select an AUXC</option>
+            <option value="AUXC_KC7TAK">KC7TAK</option>
+            <option value="AUXC_KD7DNM">KD7DNM</option>
+            <option value="AUXC_KF7KXX">KF7KXX</option>
+            <option value="AUXC_KI7BDP">KI7BDP</option>
+            <option value="AUXC_KI7DGC">KI7DGC</option>
+            <option value="AUXC_KI7FCG">KI7FCG</option>
+            <option value="AUXC_KI7LAG">KI7LAG</option>
+            <option value="AUXC_KI7O">KI7O</option>
+            <option value="AUXC_KJ7JCR">KJ7JCR</option>
+            <option value="AUXC_KK6OTP">KK6OTP</option>
+            <option value="AUXC_KK7MLS">KK7MLS</option>
+            <option value="AUXC_KK7ZTC">KK7ZTC</option>
+            <option value="AUXC_N1ACW">N1ACW</option>
+            <option value="AUXC_W6RKT">W6RKT</option>
+            <option value="AUXC_W7CRI">W7CRI</option>
+            <option value="AUXC_W7TEE">W7TEE</option>
+            <option value="AUXC_WA6ZLV">WA6ZLV</option>
+        </select>
+    </div>
     <div class="auxc-checkin" id="AUXC_KI7DGC">
         <p class="checkin-sentence">
             150, KI7DGC, VARA FM, W7BVT-10, 145.020, LAKE OSWEGO, CLACKAMAS, OREGON
